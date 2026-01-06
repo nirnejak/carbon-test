@@ -21,24 +21,30 @@ const HOURS = [
   22, 23,
 ]
 
-const initialEvent = {
+const INITIAL_EVENT = {
   title: "",
   start: null,
   end: null,
 }
 
-const demoData = [
+const DEMO_DATA = [
   { id: "a", title: "Meeting 1", start: 2, end: 3 },
   { id: "b", title: "Meeting 2", start: 4, end: 6 },
   { id: "c", title: "Meeting 3", start: 12, end: 13 },
 ]
 
 const Calendar: React.FC = () => {
-  const [events, setEvents] = React.useState<EVENT[]>(demoData)
-  const [editingEventId, setEditingEventId] = React.useState("")
+  const [events, setEvents] = React.useState<EVENT[]>(DEMO_DATA)
   const [currentEvent, setCurrentEvent] =
-    React.useState<EVENT_FORM>(initialEvent)
+    React.useState<EVENT_FORM>(INITIAL_EVENT)
+  const [editingEventId, setEditingEventId] = React.useState("")
   const [isEditing, setIsEditing] = React.useState(false)
+
+  const resetForm = () => {
+    setCurrentEvent(INITIAL_EVENT)
+    setEditingEventId("")
+    setIsEditing(false)
+  }
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setCurrentEvent({
@@ -49,9 +55,10 @@ const Calendar: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+
     if (isEditing) {
-      setEvents((events) => {
-        return events.map((event) => {
+      setEvents((events) =>
+        events.map((event) => {
           if (event.id === editingEventId) {
             return {
               id: editingEventId,
@@ -61,24 +68,21 @@ const Calendar: React.FC = () => {
             return event
           }
         })
-      })
-      setCurrentEvent(initialEvent)
-      setEditingEventId("")
-      setIsEditing(false)
+      )
     } else {
       const newEvent = {
         id: v6(),
         ...currentEvent,
       }
       setEvents([...events, newEvent as EVENT])
-      setCurrentEvent(initialEvent)
     }
+
+    resetForm()
   }
 
   const deleteEvent = () => {
     setEvents((events) => events.filter((event) => event.id !== editingEventId))
-    setCurrentEvent(initialEvent)
-    setEditingEventId("")
+    resetForm()
   }
 
   const renderHour = (hour: number) => {
