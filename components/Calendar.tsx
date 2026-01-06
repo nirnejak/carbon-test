@@ -47,12 +47,6 @@ const Calendar: React.FC = () => {
     })
   }
 
-  const deleteEvent = () => {
-    setEvents((events) => events.filter((event) => event.id !== editingEventId))
-    setCurrentEvent(initialEvent)
-    setEditingEventId("")
-  }
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (isEditing) {
@@ -81,6 +75,12 @@ const Calendar: React.FC = () => {
     }
   }
 
+  const deleteEvent = () => {
+    setEvents((events) => events.filter((event) => event.id !== editingEventId))
+    setCurrentEvent(initialEvent)
+    setEditingEventId("")
+  }
+
   const renderHour = (hour: number) => {
     let overlappingEvent: EVENT | null = null
     events.forEach((event) => {
@@ -93,7 +93,7 @@ const Calendar: React.FC = () => {
       return (
         <div
           key={hour}
-          className="grid grid-cols-12 w-full border-b border-b-zinc-300"
+          className="grid grid-cols-12 border-b border-b-zinc-300"
         >
           <div className="bg-zinc-200 text-center px-2 py-1">{hour}</div>
           <div
@@ -112,7 +112,7 @@ const Calendar: React.FC = () => {
       return (
         <div
           key={hour}
-          className="grid grid-cols-12 w-full border-b border-b-zinc-300"
+          className="grid grid-cols-12 border-b border-b-zinc-300"
         >
           <div className="bg-zinc-200 text-center px-2 py-1">{hour}</div>
           <div className="bg-zinc-100 col-span-11 px-2 py-1"></div>
@@ -123,7 +123,7 @@ const Calendar: React.FC = () => {
 
   return (
     <main className="h-dvh tracking-tighter">
-      <header className="w-full py-2 text-sm bg-zinc-900">
+      <header className="py-2 text-sm bg-zinc-900">
         <form onSubmit={handleSubmit} className="flex gap-2 justify-center">
           <input
             type="text"
@@ -170,9 +170,7 @@ const Calendar: React.FC = () => {
         </form>
       </header>
 
-      <section className="w-full">
-        {HOURS.map((hour) => renderHour(hour))}
-      </section>
+      <section>{HOURS.map((hour) => renderHour(hour))}</section>
     </main>
   )
 }
