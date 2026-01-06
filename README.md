@@ -12,9 +12,6 @@
 
 - ⚡️ Next.js 15 with App Router
 - 🎨 Tailwind CSS with Typography plugin
-- 🔒 Better Auth for authentication
-- 🗄️ Drizzle ORM with NeonDB integration
-- 📝 MDX support for content
 - 🎭 Framer Motion for animations
 - 🔔 Sonner for toast notifications
 - 🎵 use-sound for sound effects
@@ -134,30 +131,6 @@ bun run format
 
 ```bash
 bun run type-check
-```
-
-**Generate Database Migrations**
-
-```bash
-bun run db:generate
-```
-
-**Run Database Migrations**
-
-```bash
-bun run db:migrate
-```
-
-**Push Database Migrations**
-
-```bash
-bun run db:push
-```
-
-**Start Database Admin**
-
-```bash
-bun run db:studio
 ```
 
 **Build for Production**
