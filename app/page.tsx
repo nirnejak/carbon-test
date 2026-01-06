@@ -8,7 +8,7 @@ import { getMetadata } from "@/utils/metadata"
 export const metadata = getMetadata({
   path: "/",
   title: "Next.js App",
-  description: "Next.js TypeScript SaaS Starter",
+  description: "Carbon Test",
 })
 
 const Home: React.FC = () => {
@@ -20,7 +20,7 @@ const Home: React.FC = () => {
         transition={{ delay: 0, ...BASE_TRANSITION }}
         className="text-5xl font-bold tracking-tighter text-zinc-800 dark:text-zinc-300"
       >
-        Next.js TypeScript SaaS Starter!
+        Carbon Test!
       </motion.h1>
     </main>
   )

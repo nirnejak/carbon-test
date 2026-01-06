@@ -1,6 +1,6 @@
 {
-  "name": "nextjs-typescript-saas",
-  "description": "Next.js TypeScript SaaS Starter",
+  "name": "carbon-test",
+  "description": "Carbon Test",
   "version": "1.0.0",
   "author": "Jitendra Nirnejak <jeetnirnejak@gmail.com>",
   "type": "module",
@@ -68,9 +68,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nirnejak/nextjs-typescript-saas"
+    "url": "https://github.com/nirnejak/carbon-test"
   },
   "bugs": {
-    "url": "https://github.com/nirnejak/nextjs-typescript-saas/issues"
+    "url": "https://github.com/nirnejak/carbon-test/issues"
   }
 }

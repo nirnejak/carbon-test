@@ -1,5 +1,5 @@
 <h1 align="center">
-  Next.js TypeScript SaaS Starter
+  Carbon Test
 </h1>
 
 <p align="center">
@@ -65,8 +65,8 @@
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/nirnejak/nextjs-typescript-saas.git
-cd nextjs-typescript-saas
+git clone https://github.com/nirnejak/carbon-test.git
+cd carbon-test
 ```
 
 2. Install dependencies:
