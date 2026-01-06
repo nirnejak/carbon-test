@@ -10,7 +10,7 @@ interface EVENT {
   end: number
 }
 
-interface CURRENT_EVENT {
+interface EVENT_FORM {
   title: string
   start: number | null
   end: number | null
@@ -37,7 +37,7 @@ const Calendar: React.FC = () => {
   const [events, setEvents] = React.useState<EVENT[]>(demoData)
   const [editingEventId, setEditingEventId] = React.useState("")
   const [currentEvent, setCurrentEvent] =
-    React.useState<CURRENT_EVENT>(initialEvent)
+    React.useState<EVENT_FORM>(initialEvent)
   const [isEditing, setIsEditing] = React.useState(false)
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -101,7 +101,7 @@ const Calendar: React.FC = () => {
             onClick={() => {
               setIsEditing(true)
               setEditingEventId((overlappingEvent as EVENT).id)
-              setCurrentEvent(overlappingEvent as CURRENT_EVENT)
+              setCurrentEvent(overlappingEvent as EVENT_FORM)
             }}
           >
             {(overlappingEvent as EVENT).title}
