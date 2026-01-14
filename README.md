@@ -1,5 +1,5 @@
 <h1 align="center">
-  Carbon Test
+  Carbon Calendar
 </h1>
 
 <p align="center">
@@ -65,8 +65,8 @@
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/nirnejak/carbon-test.git
-cd carbon-test
+git clone https://github.com/nirnejak/carbon-calendar.git
+cd carbon-calendar
 ```
 
 2. Install dependencies:

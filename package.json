@@ -1,6 +1,6 @@
 {
-  "name": "carbon-test",
-  "description": "Carbon Test",
+  "name": "carbon-calendar",
+  "description": "Carbon Calendar",
   "version": "1.0.0",
   "author": "Jitendra Nirnejak <jeetnirnejak@gmail.com>",
   "type": "module",
@@ -69,9 +69,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nirnejak/carbon-test"
+    "url": "https://github.com/nirnejak/carbon-calendar"
   },
   "bugs": {
-    "url": "https://github.com/nirnejak/carbon-test/issues"
+    "url": "https://github.com/nirnejak/carbon-calendar/issues"
   }
 }

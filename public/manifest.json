@@ -4,9 +4,9 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "Carbon Test",
+    "name": "Carbon Calendar",
     "short_name": "Next.js App",
-    "description": "Starter for Carbon Test",
+    "description": "Starter for Carbon Calendar",
     "icons": [
         {
             "src": "/path-to-icons/icon-192x192.png",

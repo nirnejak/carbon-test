@@ -7,7 +7,7 @@ import { getMetadata } from "@/utils/metadata"
 export const metadata = getMetadata({
   path: "/",
   title: "Not Found | Next.js App",
-  description: "Page not found on Carbon Test",
+  description: "Page not found on Carbon Calendar",
 })
 
 const NotFound: React.FC = () => {

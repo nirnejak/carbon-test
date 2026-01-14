@@ -1,7 +1,7 @@
 const config = {
-  baseUrl: "https://carbon-test.vercel.app",
-  appName: "Carbon Test",
-  appDescription: "Starter for Carbon Test",
+  baseUrl: "https://carbon-calendar.vercel.app",
+  appName: "Carbon Calendar",
+  appDescription: "Starter for Carbon Calendar",
   creator: "Jitendra Nirnejak",
   authorName: "Jitendra Nirnejak",
   authorUrl: "https://nirnejak.com/",
